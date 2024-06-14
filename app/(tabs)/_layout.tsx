@@ -1,3 +1,4 @@
+///(tabs)/_layout.tsx
 import { Tabs } from 'expo-router';
 import React from 'react';
 
@@ -10,10 +11,11 @@ export default function TabLayout() {
 
   return (
     <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
+        screenOptions={{
+            tabBarStyle: { backgroundColor: Colors[colorScheme ?? 'dark'].background },
+            tabBarActiveTintColor: Colors[colorScheme ?? 'dark'].tint,
+            headerShown: false,
+        }}>
       <Tabs.Screen
         name="index"
         options={{
